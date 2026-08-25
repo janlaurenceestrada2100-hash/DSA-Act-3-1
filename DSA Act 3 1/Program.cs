@@ -1,6 +1,14 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Serialization;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Transactions;
+
 
 namespace DSA_Act_3_1
 {
@@ -22,15 +30,16 @@ namespace DSA_Act_3_1
                 int[] score = new int[10];
                 for (int x = 0; x < 10; x++)
                 {
-                    Console.WriteLine($"Enter Score[{x + 1}]: ");
+                    Console.WriteLine($"Enter Score {x + 1}: ");
                     score[x] = Convert.ToInt32(Console.ReadLine());
                 }
+                Console.WriteLine("Scores: ");
+                foreach (int x in score) Console.WriteLine(x);
 
-                foreach (int scores in score)
-                {
-                    Console.WriteLine("Scores: "  $" {score}");
-                }
-                Console.ReadKey();
+
+
+                Console.WriteLine("Average Score is " );
+                Console.WriteLine("Remark: " );
 
 
 
