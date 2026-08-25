@@ -1,5 +1,6 @@
 ﻿
 using System.Globalization;
+using System.Transactions;
 
 namespace DSA_Act_3_1
 {
@@ -19,14 +20,15 @@ namespace DSA_Act_3_1
 
 
                 int[] score = new int[10];
-                for (int x = 1; x <= 12; x++)
+                for (int x = 0; x < 10; x++)
                 {
-                    score[x-1]=Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine($"Enter Score[{x + 1}]: ");
+                    score[x] = Convert.ToInt32(Console.ReadLine());
                 }
 
-                foreach (string month in score)
+                foreach (int scores in score)
                 {
-                    Console.WriteLine("Scores: " + $"-> {score}");
+                    Console.WriteLine("Scores: "  $" {score}");
                 }
                 Console.ReadKey();
 
