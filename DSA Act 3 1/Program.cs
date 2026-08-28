@@ -25,31 +25,36 @@ namespace DSA_Act_3_1
             try
             {
 
-                int sum;
-                int avg;
+                int sum = 0;
+                int avg = 0;
                 int[] score = new int[10];
                 for (int x = 0; x < 10; x++)
                 {
                     Console.Write($"Enter Score {x + 1}: ");
                     score[x] = Convert.ToInt32(Console.ReadLine());
-                    sum =+score[x];
-                    avg = sum / 10;
+                    sum =+ score[x];
                 }
                 avg = sum / 10;
                 Console.Write("Scores: ");
-                foreach (int x in score) Console.Write(x);
-
+                foreach (int x in score)
+                {
+                    Console.Write(x + " ");
+                }
+                Console.WriteLine();
                 Console.Write("Average Score is " + avg);
-
+                Console.WriteLine();
                 string remark;
 
+                if (avg >= 90)
+                    remark = "Excellent";
+                else if (avg >= 80)
+                    remark = "Very Good";
+                else if (avg >= 75)
+                    remark = "Passed";
+                else
+                    remark = "Failed";
 
-                Console.Write("Remark: " );
-
-
-
-
-
+                Console.Write("Remark: " + remark );
 
 
             }
