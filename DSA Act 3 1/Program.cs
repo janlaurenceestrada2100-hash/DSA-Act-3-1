@@ -32,7 +32,8 @@ namespace DSA_Act_3_1
                 {
                     Console.Write($"Enter Score {x + 1}: ");
                     score[x] = Convert.ToInt32(Console.ReadLine());
-                    sum =+ score[x];
+                    
+                    sum += score[x];
                 }
                 avg = sum / 10;
                 Console.Write("Scores: ");
